@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meraya Festival Ticket</title>
+
+<style>
+body{
+font-family: Arial;
+background:#f4f4f4;
+margin:0;
+}
+
+.header{
+background:#00a79d;
+color:white;
+padding:15px;
+text-align:center;
+font-size:20px;
+}
+
+.container{
+padding:15px;
+}
+
+.ticket{
+background:white;
+border-radius:10px;
+padding:15px;
+margin-bottom:15px;
+box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+.price{
+font-size:20px;
+font-weight:bold;
+}
+
+button{
+background:#00a79d;
+color:white;
+border:none;
+padding:10px 15px;
+border-radius:6px;
+cursor:pointer;
+}
+
+button:hover{
+background:#008f86;
+}
+
+.footer{
+position:fixed;
+bottom:0;
+width:100%;
+background:white;
+padding:15px;
+box-shadow:0 -2px 5px rgba(0,0,0,0.1);
+}
+
+.total{
+font-size:18px;
+font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+MERAYA FESTIVAL
+</div>
+
+<div class="container">
+
+<div class="ticket">
+<h3>PRESALE 3 - SENDIRI</h3>
+<p>
+1 tiket berlaku untuk 1 orang<br>
+Tiket berlaku 28 Juni 2026<br>
+Tidak dapat refund
+</p>
+
+<div class="price">Rp 185.000</div>
+<br>
+
+<button onclick="addTicket(185000)">Select Ticket</button>
+</div>
+
+<div class="ticket">
+<h3>PRESALE 3 - BERDUA</h3>
+<p>
+Paket 2 orang<br>
+Tiket berlaku 28 Juni 2026
+</p>
+
+<div class="price">Rp 340.000</div>
+<br>
+
+<button onclick="addTicket(340000)">Select Ticket</button>
+</div>
+
+</div>
+
+<div class="footer">
+<div class="total">
+Total: Rp <span id="total">0</span>
+</div>
+<br>
+<button style="width:100%">Order</button>
+</div>
+
+<script>
+let total = 0;
+
+function addTicket(price){
+total += price;
+document.getElementById("total").innerText = total.toLocaleString("id-ID");
+}
+</script>
+
+</body>
+</html>
